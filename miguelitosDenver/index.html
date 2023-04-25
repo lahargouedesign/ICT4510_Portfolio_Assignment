@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+    <!--
+        Name: Michael C. Lahargoue
+        Course: ICT-4510 Adv Website Design & Mgmt(Online Asynchronous)
+        Term: Winter Quarter 2023
+        Date: 03.12.2023
+        Instructor: Fernando Reyes
+        Assignment Name: Week 10 Portfolio Assignment 
+        Assignment Description: RESTAURANT WEB APPLICATION | Index.html
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+         <!-- Website Title --> 
+        <title>Miguelitos Denver</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">          
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+        
+        <!--Mapbox CDN-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+        <!--Leaflet CDN-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="crossorigin=""></script>
+<!--
+TemplateMo 584 Pod Talk
+https://templatemo.com/tm-584-pod-talk-->
+
+<!--Nav Start-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand me-lg-5 me-0" href="index.html">
+            <a class="Logo" href="index.html"><img src="images/Miguelitos Denver Logo.png" width="160" 
+                height="160"alt="logo"></a>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                        <li><a class="dropdown-item" href="menu.html">Winter Menu</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <div class="ms-4">
+                <a href="admin.html" class="btn custom-btn custom-border-btn smoothscroll">Admin</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--Nav End-->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12">
+                <div class="text-center mb-5 pb-2">
+                    <h1 class="text-white">Miguelitos Denver</h1>
+
+                    <p class="text-white">Modern Food. In the heart of Denver.</p>
+
+                </div>
+
+                <div class="owl-carousel owl-theme">
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/anshu-a-BhnZwPW_tIc-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                               Our Chicken 
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">Farm Raised</span>
+
+                            <span class="badge">Organic and All Natural</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/chad-montano-M0lUxgLnlfk-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                Our Beef
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">Colorado Steer</span>
+
+                            <span class="badge">Grass Fed</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-pinterest"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/kevin-kelly-PPneSBqfCCU-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                The Wine
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">All Natural</span>
+
+                            <span class="badge">Biodynamic</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-pinterest"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                The Sweets
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">Ridiculous</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-youtube"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/victoria-shes-UC0HZdUitWY-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                Locally Owned
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">Farm on Site</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-youtube"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/jason-leung--eKZLpj7U0E-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                Food Education
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">Classes</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/redd-f-WvZalcEX74A-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                Wine and Bartending Education
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt=""></h4>
+
+                            <span class="badge">Classes</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="owl-carousel-info-wrap item">
+                        <img src="images/Website Pictures/volkan-vardar-1H30uRC1plc-unsplash.jpg" class="owl-carousel-image img-fluid" alt="">
+
+                        <div class="owl-carousel-info">
+                            <h4 class="mb-2">
+                                Events
+                                <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+                            </h4>
+
+                            <span class="badge">All the Fun</span>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Contact</h6>
+
+                <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
+
+                <p>
+                    <strong class="d-inline me-2">Email:</strong>
+                    <a href="#">MiguelitosDenver@food.co</a> 
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <h6 class="site-footer-title mb-3">Use Our Wine App!</h6>
+
+                <div class="site-footer-thumb mb-4 pb-2">
+                    <div class="d-flex flex-wrap">
+                        <a href="#">
+                            <img src="images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="images/play-store.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <h6 class="site-footer-title mb-3">Socials</h6>
+
+                <ul class="social-icon">
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-instagram"></a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-twitter"></a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-whatsapp"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row align-items-center">
+
+    <div class="col-lg-2 col-md-3 col-12">
+        <a class="navbar-brand" href="index.html">
+            <a class="Logo" href="index.html"><img src="images/Miguelitos Denver Logo.png" width="160" 
+                height="160"alt="logo"></a>
+        </a>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-12">
+        <p class="copyright-text mb-0">Copyright © 2023 Miguelitos Denver | By Michael C. Lahargoue
+            <br><br>
+            University of Denver <a>ICT 4510 Portfolio Assignment</a></p>
+    </div>
+
+        </div>
+    </div>
+</footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

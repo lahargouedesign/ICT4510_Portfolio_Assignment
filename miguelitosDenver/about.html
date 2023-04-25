@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+    <!--
+        Name: Michael C. Lahargoue
+        Course: ICT-4510 Adv Website Design & Mgmt(Online Asynchronous)
+        Term: Winter Quarter 2023
+        Date: 03.12.2023
+        Instructor: Fernando Reyes
+        Assignment Name: Week 10 Portfolio Assignment 
+        Assignment Description: RESTAURANT WEB APPLICATION | About Page with map
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Website Title --> 
+        <title>Miguelitos Denver - About Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">             
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css"> 
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+               <link href="css/mapstyle.css" rel="stylesheet">
+
+        <!--Mapbox CDN-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+        <!--Leaflet CDN-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="crossorigin=""></script>
+<!--
+
+TemplateMo 584 Pod Talk
+
+https://templatemo.com/tm-584-pod-talk
+
+-->
+    </head>
+    
+    <body>
+
+        <main>
+            <!--Nav Start-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand me-lg-5 me-0" href="index.html">
+                        <a class="Logo" href="index.html"><img src="images/Miguelitos Denver Logo.png" width="160" 
+                            height="160"alt="logo"></a>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="menu.html">Winter Menu</a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+
+                        <div class="ms-4">
+                            <a href="admin.html" class="btn custom-btn custom-border-btn smoothscroll">Admin</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!--Nav End-->
+
+            <!--Contact-->
+
+    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 text-center">
+
+                    <h2 class="mb-0">About and Where</h2>
+                </div>
+
+            </div>
+        </div>
+
+    </header>        
+
+    <div class="col-lg-8 col-12 mx-auto">
+        <div class="pb-5 mb-5">
+            <div class="section-title-wrap mb-4">
+                <h4 class="section-title">Come find us near DU</h4>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+
+            <div class="col-lg-5 col-12 pe-lg-5">
+                <div class="contact-info">
+                    <h3 class="mb-4">We love to feed you. Join Us!</h3>
+
+                    <p class="d-flex border-bottom pb-3 mb-4">
+                        <strong class="d-inline me-4">Hours Of Awesomeness: </strong>
+                        <span>Monday-Sunday </span>
+                        <span>4:00pm - 10:30 pm</span>
+                    </p>
+
+                    <p class="d-flex border-bottom pb-3 mb-4">
+                        <strong class="d-inline me-4">Phone:</strong>
+                        <span>010-020-0340</span>
+                    </p>
+
+                    <p class="d-flex border-bottom pb-3 mb-4">
+                        <strong class="d-inline me-4">Email:</strong>
+                        <a href="#">MiguelitosDenver@food.co</a> 
+                    </p>
+
+                    <p class="d-flex">
+                        <strong class="d-inline me-4">Location:</strong>
+                        <span>2199 S University Blvd, Denver, CO 80208</span>
+                    </p>
+                </div>
+            </div>
+            
+            <p id="status"></p>
+            <a id="map-link" target="_blank"></a>	
+            <div id='map'></div>
+
+            <div class="container">
+                <div class="row">
+                <div class="footer columns">
+        </div>
+    </div>    
+            
+            <section class="about-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="pb-5 mb-5">
+                                <div class="section-title-wrap mb-4">
+                                    <h4 class="section-title">Our story</h4>
+                                </div>
+
+                                <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+
+                                <p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
+
+                                <img src="images/Website Pictures/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="about-image mt-5 img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h4 class="section-title">Meet The Team</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="team-thumb bg-white shadow-lg">
+                                <img src="images/Website Pictures/sebastian-coman-photography-eBmyH7oO5wY-unsplash.jpg" class="about-image img-fluid" alt="">
+
+                                <div class="team-info">
+                                    <h4 class="mb-2">
+                                        Michael Sr. 
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                    </h4>
+
+                                    <span class="badge">Head Chef</span>
+
+                                    <span class="badge">Owner</span>
+                                </div>
+
+                                <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-twitter"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-facebook"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-pinterest"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="team-thumb bg-white shadow-lg">
+                                <img src="images/Website Pictures/febrian-zakaria-SiQgni-cqFg-unsplash.jpg" class="about-image img-fluid" alt="">
+
+                                <div class="team-info">
+                                    <h4 class="mb-2">
+                                        Michael C. 
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                    </h4>
+
+                                    <span class="badge">Pastry</span>
+
+                                    <span class="badge">Candy Making</span>
+                                </div>
+
+                                <div class="social-share">
+                                    <ul class="social-icon">
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-twitter"></a>
+                                        </li>
+
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-facebook"></a>
+                                        </li>
+
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-pinterest"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                            <div class="team-thumb bg-white shadow-lg">
+                                <img src="images/Website Pictures/eiliv-aceron-wNQoaYCFcsI-unsplash.jpg" class="about-image img-fluid" alt="">
+
+                                <div class="team-info">
+                                    <h4 class="mb-2">
+                                        Mike K.
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                    </h4>
+
+                                    <span class="badge">Chef De Cuisine</span>
+                                </div>
+
+                                <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                            <div class="team-thumb bg-white shadow-lg">
+                                <img src="images/Website Pictures/marie-michele-bouchard-3U9BCWHMhUw-unsplash.jpg" class="about-image img-fluid" alt="">
+
+                                <div class="team-info">
+                                    <h4 class="mb-2">
+                                        Michelle
+                                        <img src="images/verified.png" class="verified-image img-fluid" alt="">
+                                    </h4>
+
+                                    <span class="badge">Bar Manager</span>
+
+                                    <span class="badge">Event Specialist</span>
+                                </div>
+
+                                <div class="social-share">
+                                        <ul class="social-icon">
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                                            </li>
+
+                                            <li class="social-icon-item">
+                                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+<!-- Main End -->
+<!-- Footer Start -->
+
+<footer class="site-footer">
+<div class="container">
+<div class="row">
+
+    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
+        <h6 class="site-footer-title mb-3">Contact</h6>
+
+        <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
+
+        <p>
+            <strong class="d-inline me-2">Email:</strong>
+            <a href="#">MiguelitosDenver@food.co</a> 
+        </p>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-12">
+        <h6 class="site-footer-title mb-3">Use Our Wine App!</h6>
+
+        <div class="site-footer-thumb mb-4 pb-2">
+            <div class="d-flex flex-wrap">
+                <a href="#">
+                    <img src="images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="images/play-store.png" class="img-fluid" alt="">
+                </a>
+            </div>
+        </div>
+
+        <h6 class="site-footer-title mb-3">Socials</h6>
+
+        <ul class="social-icon">
+            <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-instagram"></a>
+            </li>
+
+            <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-twitter"></a>
+            </li>
+
+            <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-whatsapp"></a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</div>
+
+<div class="container pt-5">
+<div class="row align-items-center">
+
+    <div class="col-lg-2 col-md-3 col-12">
+        <a class="navbar-brand" href="index.html">
+            <a class="Logo" href="index.html"><img src="images/Miguelitos Denver Logo.png" width="160" 
+                height="160"alt="logo"></a>
+        </a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-12">
+        <p class="copyright-text mb-0">Copyright © 2023 Miguelitos Denver | By Michael C. Lahargoue
+            <br><br>
+            University of Denver <a>ICT 4510 Portfolio Assignment</a></p>
+    </div>
+
+</div>
+</div>
+    <!--Contact end-->
+</footer>       
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/mapscript.js"></script>
+
+    </body>
+</html>

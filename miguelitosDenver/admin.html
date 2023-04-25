@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+    <!--
+        Name: Michael C. Lahargoue
+        Course: ICT-4510 Adv Website Design & Mgmt(Online Asynchronous)
+        Term: Winter Quarter 2023
+        Date: 03.12.2023
+        Instructor: Fernando Reyes
+        Assignment Name: Week 10 Portfolio Assignment 
+        Assignment Description: RESTAURANT WEB APPLICATION | Admin Log in Page to Access Food Menu
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Website Title --> 
+        <title>Miguelitos Denver - Admin Page</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">  
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">               
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link href="css/templatemo-pod-talk.css" rel="stylesheet">
+ 
+<!--
+
+TemplateMo 584 Pod Talk
+
+https://templatemo.com/tm-584-pod-talk
+
+-->
+    </head>
+    
+    <body>
+
+        <main>
+            <!--Nav Start-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand me-lg-5 me-0" href="index.html">
+                        <a class="Logo" href="index.html"><img src="images/Miguelitos Denver Logo.png" width="160" 
+                            height="160"alt="logo"></a>
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="menu.html">Winter Menu</a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+
+                        <div class="ms-4">
+                            <a href="admin.html" class="btn custom-btn custom-border-btn smoothscroll">Admin</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!--Nav End-->                  
+
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+
+                            <h2 class="mb-0">Admin Page</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <center>
+                    <div id="login-form-container">
+                        <h2>Login Here</h2>
+                        <form id="login-form">
+                          <label for="username">Username:</label>
+                          <input type="text" id="username" name="username" required>
+                          <br>
+                          <label for="password">Password:</label>
+                          <input type="password" id="password" name="password" required>
+                          <br>
+                          <button type="submit">Login</button>
+                        </form>
+                      </div>
+                    
+                      <div id="food-menu-item-form-container" style="display: none;">
+                        <h2>Add Food Menu Item</h2>
+                        <form id="food-menu-item-form">
+                          <label for="item">Item:</label>
+                          <input type="text" id="item" name="item" required>
+                          <br>
+                          <label for="description">Description:</label>
+                          <input type="text" id="description" name="description" required>
+                          <br>
+                          <label for="price">Price:</label>
+                          <input type="text" id="price" name="price" required>
+                          <br>
+                          <button type="submit">Add Menu Item</button>
+                        </form>
+                      </div>
+                </center>
+            </section>
+            <section>
+                <center>
+                    <form>
+                        <button id="logout-button">Log out</button>
+                    </form>
+                </center>
+            </section>
+
+            <sections>
+                <center>
+                    <ul id="menu-list">
+                        <!-- menu items will be here-->
+                        
+                      </ul>
+                      <p></p>
+                      
+                </center>
+            </sections>
+<!-- Footer -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Contact</h6>
+
+                <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
+
+                <p>
+                    <strong class="d-inline me-2">Email:</strong>
+                    <a href="#">MiguelitosDenver@food.co</a> 
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <h6 class="site-footer-title mb-3">Use Our Wine App!</h6>
+
+                <div class="site-footer-thumb mb-4 pb-2">
+                    <div class="d-flex flex-wrap">
+                        <a href="#">
+                            <img src="images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="images/play-store.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <h6 class="site-footer-title mb-3">Socials</h6>
+
+                <ul class="social-icon">
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-instagram"></a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-twitter"></a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-whatsapp"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row align-items-center">
+
+            <div class="col-lg-2 col-md-3 col-12">
+                <a class="navbar-brand" href="index.html">
+                    <a class="Logo" href="index.html"><img src="images/Miguelitos Denver Logo.png" width="160" 
+                        height="160"alt="logo"></a>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-12">
+                <p class="copyright-text mb-0">Copyright © 2023 Miguelitos Denver | By Michael C. Lahargoue
+                    <br><br>
+                    University of Denver <a>ICT 4510 Portfolio Assignment</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/logoutbutton.js"></script>
+        <script src="js/APP.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              <!-- <script scr="js/foodfunction.js"></script> -->
+        <script src="js/menuselect.js"></script>
+        <script scr="js/fooditems.js"></script>
+        
+
+
+    </body>
+</html>
